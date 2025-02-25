@@ -19,7 +19,8 @@
 
 ## 安装使用
 
-# 安装依赖
+安装依赖
+
 ```bash
 pip install pyqt5 pyperclip
 ```
@@ -60,3 +61,38 @@ POLL_INTERVAL = 1000
 跨平台剪贴板支持（Windows/macOS/Linux）
 线程安全的剪贴板监听
 实际效果：每次复制内容后，Typora会自动刷新显示新增内容（需开启自动重载），形成按时间排序的引用内容集合。
+
+## 打包为Windows可执行文件
+
+### 准备工作
+1. 安装打包工具
+```bash
+pip install pyinstaller
+```
+
+2. 准备程序图标（可选）
+   - 将PNG图标转换为ICO格式（推荐尺寸：256x256）
+   - 保存为`app.ico`到项目目录
+
+### 打包步骤
+1. 创建打包脚本（build.bat）
+```bash
+@echo off
+pyinstaller --noconsole --onefile --icon=app.ico clipAssistant.py
+pause
+```
+
+2. 双击运行build.bat
+3. 等待打包完成（约1-3分钟）
+
+### 生成文件
+- 在`dist`目录中找到`clipAssistant.exe`
+- 文件大小约15-20MB（包含Python运行时）
+
+### 注意事项
+1. 首次运行时杀毒软件可能误报，需添加信任
+2. 确保打包环境与运行环境架构一致（32/64位）
+3. 可添加版本信息（需创建version.txt文件）
+4. 建议在纯净虚拟环境中打包减少体积
+
+> 专业提示：使用[NSIS](https://nsis.sourceforge.io)可制作安装程序

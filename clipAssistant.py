@@ -32,7 +32,7 @@ class ClipboardThread(QThread):
 
         # 写入Markdown文件
         try:
-            with open("clipboard_log.md", "a", encoding="utf-8") as f:
+            with open("clips.md", "a", encoding="utf-8") as f:
                 f.write(processed)
                 if self.add_newline:
                     f.write("\n\n")  # 添加两个换行
