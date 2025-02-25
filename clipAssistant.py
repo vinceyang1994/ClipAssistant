@@ -52,7 +52,9 @@ class ClipboardApp(QWidget):
 
         # 设置选项
         self.quote_check = QCheckBox("添加引用符号（>）", self)
+        self.quote_check.setChecked(True)  # 默认勾选
         self.newline_check = QCheckBox("自动换行", self)
+        self.newline_check.setChecked(True)  # 默认勾选
         layout.addWidget(self.quote_check)
         layout.addWidget(self.newline_check)
 
