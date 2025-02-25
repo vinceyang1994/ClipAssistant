@@ -1,10 +1,10 @@
 # 剪贴板助手 Clipboard Assistant
 
-![界面预览](screenshot.png)
+![界面预览](resource\screenshot.png)
 
 自动粘贴文件结果：
 
-![结果预览](clips.png)
+![结果预览](resource\clips.png)
 
 ## 使用场景
 1. **阅读/整理资料**：在浏览器/PDF阅读器中复制重点内容时自动保存
@@ -82,7 +82,7 @@ pip install pyinstaller
 1. 创建打包脚本（build.bat）
 ```bash
 @echo off
-pyinstaller --noconsole --onefile --icon=app.ico clipAssistant.py
+pyinstaller --noconsole --onefile --icon=resource\app.ico clipAssistant.py
 pause
 ```
 
@@ -100,3 +100,6 @@ pause
 4. 建议在纯净虚拟环境中打包减少体积
 
 > 专业提示：使用[NSIS](https://nsis.sourceforge.io)可制作安装程序
+
+## TODO
+执行时在任务栏和主界面未按预期加载对应app.ico

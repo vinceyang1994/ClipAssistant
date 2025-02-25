@@ -3,6 +3,7 @@ import pyperclip
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, 
                             QCheckBox, QVBoxLayout, QLabel, QStatusBar)
 from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtGui import QIcon
 
 class ClipboardThread(QThread):
     update_status = pyqtSignal(str)
@@ -47,6 +48,7 @@ class ClipboardApp(QWidget):
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('resource\app.ico'))
         # 界面布局
         layout = QVBoxLayout()
 
