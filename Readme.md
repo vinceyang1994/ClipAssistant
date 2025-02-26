@@ -1,11 +1,11 @@
 # 剪贴板助手 Clipboard Assistant
 剪贴板助手是一款实时监听系统剪贴板的桌面工具，能够自动将复制的文本/代码内容按时间顺序保存为带格式的Markdown文档，适用于资料整理、写作辅助、代码收集等场景，支持后台静默运行与自定义配置。
 
-![界面预览](resource\screenshot.png)
+![界面预览](resource/screenshot.png)
 
 自动粘贴文件结果：
 
-![结果预览](resource\clips.png)
+![结果预览](resource/clips.png)
 
 ## 使用场景
 1. **阅读/整理资料**：在浏览器/PDF阅读器中复制重点内容时自动保存
